@@ -1,0 +1,2 @@
+# zak-drseg
+django+tensorflow

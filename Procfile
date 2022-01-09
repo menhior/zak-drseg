@@ -1,0 +1,1 @@
+web: gunicorn drimg_segment.wsgi --log-file -

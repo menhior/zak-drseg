@@ -1,0 +1,52 @@
+{% extends 'header.html' %}
+
+{% block content%}
+<div class="container">
+<div class="row">
+    <div class="col-md-12">
+    <h2>Upload Image for Classification</h2>
+
+    
+    <br>
+   
+    <form method="post" enctype="multipart/form-data" action="predictImage">
+  
+ {% csrf_token %}
+ <div class="col-md-4 col-sm-4"><label for="fname">Upload Image File Here:</label> </div> <input name="filePath" type="file"><br><br>
+ <br>
+
+ 
+ <input type="submit" value="Submit" ></div>
+
+</form>
+</div>
+</div>
+</div>
+<br>
+<br>
+<div class="container">
+<div class="row">
+<div class="col-md-5">
+ <h2>Uploaded Image</h2>
+    <img style="width:400px; height:400;" src={{filePathName}} alt='image'>
+ </div>
+ <div class="col-md-2"></div>
+<div class="col-md-5">
+    <h2>Segmented Prediction</h2>
+ <img style="width:400px; height:400;" src={{predictedLabel}} alt='image classifications'>
+</div>
+</div>
+<br>
+</div>
+<br>
+<div class="container">
+<div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <p>
+                This app takes drone aerial image and provides its segmented version.This is my first attempt to use tensorflow together with django. Dataset for the model you can find on <a href="https://www.kaggle.com/bulentsiyah/semantic-drone-dataset">Kaggle</a>. Model used can be found in this <a href="https://www.kaggle.com/menhior/aerial-drone-shots-image-segmentation">kaggle notebook</a>.</p>
+        </div>
+        <div class="col-md-2"></div>
+</div>
+</div>
+{% endblock %}

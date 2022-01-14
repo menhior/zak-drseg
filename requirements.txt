@@ -109,8 +109,6 @@ threadpoolctl==3.0.0
 tqdm==4.62.2
 trio==0.19.0
 trio-websocket==0.9.2
-Twisted==21.7.0
-twisted-iocpsupport==1.0.2
 typing-extensions==3.7.4.3
 tzdata==2021.5
 urllib3==1.26.6
